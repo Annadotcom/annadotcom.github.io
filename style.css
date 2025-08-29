@@ -8,9 +8,11 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0; padding:0}
-body{color:var(--fg); background:var(--bg);
-     font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-     letter-spacing:.2px;}
+body{
+  color:var(--fg); background:var(--bg);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  letter-spacing:.2px;
+}
 a{color:var(--link); text-decoration:none}
 a:hover{text-decoration:underline}
 
@@ -20,12 +22,16 @@ a:hover{text-decoration:underline}
   display:flex; justify-content:center; gap:24px; flex-wrap:wrap;
 }
 .topnav a{color:var(--fg)}
-.topnav a.active{ color:var(--accent); font-weight:600;
-  border-bottom:2px solid var(--accent); padding-bottom:2px; }
+.topnav a.active{
+  color:var(--accent); font-weight:600;
+  border-bottom:2px solid var(--accent); padding-bottom:2px;
+}
 
 /* === Layout ==================================================== */
-.layout{max-width:1100px; margin:24px auto;
-  display:grid; grid-template-columns: 300px 1fr; gap:28px; padding:0 20px}
+.layout{
+  max-width:1100px; margin:24px auto;
+  display:grid; grid-template-columns: 300px 1fr; gap:28px; padding:0 20px;
+}
 @media (max-width: 820px){ .layout{grid-template-columns: 1fr} }
 
 /* === Sidebar card ============================================= */
@@ -55,24 +61,56 @@ a:hover{text-decoration:underline}
 
 /* === Content headings & blocks ================================ */
 .content{min-height:50vh}
-.content h1{font-size:28px;font-weight:700;border-bottom:2px solid #e9eef6;padding-bottom:8px;margin:0 0 16px}
+.content h1{
+  font-size:28px; font-weight:700; border-bottom:2px solid #e9eef6;
+  padding-bottom:8px; margin:0 0 16px;
+}
+.content h2{
+  font-size:22px; margin-top:28px; color:var(--accent);
+  border-left:4px solid var(--accent); padding-left:8px;
+}
 
 /* === Publications styling ===================================== */
 .pub-list{list-style:none;padding:0;margin:0}
-.pub{margin-bottom:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px;
-     background:#fff; box-shadow:0 1px 2px rgba(16,24,40,.04);}
-.title{font-weight:700; font-size:18px; margin-bottom:4px; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.pub{
+  margin-bottom:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px;
+  background:#fff; box-shadow:0 1px 2px rgba(16,24,40,.04);
+}
+.title{
+  font-weight:700; font-size:18px; margin-bottom:4px;
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+}
 .paper-link{display:inline-grid; place-items:center; width:18px; height:18px}
 .paper-link svg{width:18px; height:18px; display:block}
 .paper-link .paper{fill:var(--paper)}
 .authors{color:#333; font-size:15px}
 .venue{color:#555; font-style:italic; font-size:15px}
 .meta{color:#666; font-size:14px}
-.badge{display:inline-block; padding:2px 6px; font-size:12px; font-weight:700; border-radius:6px; background:#e7f1ff; color:#0a58ca; margin-right:6px;}
+.badge{
+  display:inline-block; padding:2px 6px; font-size:12px; font-weight:700;
+  border-radius:6px; background:#e7f1ff; color:#0a58ca; margin-right:6px;
+}
 
-/* === Education styling ======================================== */
-.edu-list{list-style:none;padding:0;margin:0}
-.edu-list li{margin-bottom:18px}
-.edu-period{font-weight:600;color:var(--accent)}
-.edu-degree{font-weight:600}
-.edu-school{color:#333}
+/* === Education timeline ======================================= */
+.timeline{
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid var(--accent);
+}
+.timeline-item{
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-dot{
+  position: absolute;
+  left: -11px; /* chỉnh -12px hoặc -10px nếu muốn căn giữa hơn */
+  top: 4px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--accent); border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.timeline-content{ margin-left: 10px; }
+.timeline-content .edu-period{ font-weight: 600; color: var(--accent); }
+.timeline-content .edu-degree{ font-weight: 600; margin: 4px 0; }
+.timeline-content .edu-school{ color: #333; }
