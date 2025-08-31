@@ -114,3 +114,31 @@ a:hover{text-decoration:underline}
 .timeline-content .edu-period{ font-weight: 600; color: var(--accent); }
 .timeline-content .edu-degree{ font-weight: 600; margin: 4px 0; }
 .timeline-content .edu-school{ color: #333; }
+/* === Publications: 2-column layout (main + pending) ============ */
+.pubs-grid{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:24px;
+}
+@media (max-width: 980px){
+  .pubs-grid{ grid-template-columns: 1fr; }
+}
+
+.pending-card{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  padding:16px;
+  box-shadow:0 1px 2px rgba(16,24,40,.04);
+}
+.pending-card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  color:var(--accent);
+  border-left:4px solid var(--accent);
+  padding-left:8px;
+}
+
+.pending-list .pub{
+  margin-bottom:12px;
+}
