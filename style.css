@@ -120,7 +120,7 @@ a:hover{text-decoration:underline}
   grid-template-columns: 2fr 1fr;
   gap:24px;
 }
-@media (max-width: 980px){
+@media (max-width: 860px){
   .pubs-grid{ grid-template-columns: 1fr; }
 }
 
