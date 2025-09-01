@@ -98,13 +98,24 @@ a:hover{text-decoration:underline}
   margin-bottom:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px;
   background:#fff; box-shadow:0 1px 2px rgba(16,24,40,.04);
 }
+/* Trước đây: .title { display:flex; flex-wrap:wrap; } */
 .title{
-  font-weight:700; font-size:18px; margin-bottom:4px;
-  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  display:block;                 /* để các <a> bên trong chạy inline bình thường */
+  font-weight:700;
+  font-size:18px;
+  margin-bottom:4px;
+  line-height:1.3;
 }
-.paper-link{display:inline-grid; place-items:center; width:18px; height:18px}
+
+.paper-link{
+  display:inline-block;          /* icon inline cùng hàng */
+  vertical-align:baseline;
+  width:18px; height:18px;
+  margin-left:6px;               /* sát tiêu đề */
+}
 .paper-link svg{width:18px; height:18px; display:block}
 .paper-link .paper{fill:var(--paper)}
+
 .authors{color:#333; font-size:15px}
 .venue{color:#555; font-style:italic; font-size:15px}
 .meta{color:#666; font-size:14px}
@@ -148,8 +159,15 @@ a:hover{text-decoration:underline}
   border-left:4px solid var(--pending);
   padding-left:8px;
 }
-/* Year headings */
+/* Year headings  =================================== */
 .content h2.year{
   color:#819A91;
   border-left-color:#819A91;
 }
+
+/* Paper titles: black & bold ===================================  */
+.pub .title a{
+  color:#111;            /* đen */
+  font-weight:700;       /* đậm (backup, dù .title đã bold) */
+}
+.pub .title a:hover{ text-decoration:underline; }
