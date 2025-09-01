@@ -148,3 +148,8 @@ a:hover{text-decoration:underline}
   border-left:4px solid var(--pending);
   padding-left:8px;
 }
+/* Year headings */
+.content h2.year{
+  color:#819A91;
+  border-left-color:#819A91;
+}
