@@ -172,3 +172,18 @@ a:hover{text-decoration:underline}
 .timeline-content .edu-period{ font-weight:600; color:var(--accent) }
 .timeline-content .edu-degree{ font-weight:600; margin:4px 0 }
 .timeline-content .edu-school{ color:#333 }
+
+/* Headings muốn dùng màu #819A91 (giống year) */
+.content h2.year{
+  color:var(--year);            /* #819A91 */
+  border-left-color:var(--year);
+}
+
+/* Timeline cho Education dùng màu đen */
+.timeline-edu{
+  border-left-color:#111;
+}
+.timeline-edu .timeline-dot{
+  background:#111;
+  box-shadow:0 0 0 2px #111;
+}
