@@ -6,8 +6,15 @@
   <title>Awards – Phuoc B. T. Huynh</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* safety: chắc chắn phần nội dung hiển thị */
-    .content { display:block; color: var(--fg); }
+    /* Fallback to be safe (override if CSS cached/bug) */
+    .layout{max-width:1100px;margin:24px auto;display:flex;gap:28px;align-items:flex-start;padding:0 20px}
+    @media (max-width:820px){.layout{flex-direction:column}}
+    .sidebar{flex:0 0 300px;background:#fbfcff;border:1px solid #eef2f7;border-radius:12px;padding:20px}
+    .content{flex:1 1 auto;min-width:0;color:#111}
+    .name{font-size:22px;font-weight:700;text-align:center;margin:6px 0 6px}
+    .subtitle{color:#667085;text-align:center;font-size:14px;margin:0 0 14px}
+    .social-list{list-style:none;padding:0;margin:0}
+    .social-list li{display:flex;gap:10px;padding:10px 8px;border-radius:8px}
   </style>
 </head>
 <body>
@@ -30,10 +37,10 @@
       <ul class="social-list">
         <li><span class="icon location"></span><span class="label">Seoul, Korea</span></li>
         <li><span class="icon email"></span><a class="label" href="mailto:htbpphuoc@gmail.com">htbpphuoc@gmail.com</a></li>
-        <li><span class="icon facebook"></span><a class="label" href="https://www.facebook.com/htbpphuoc" target="_blank">Facebook</a></li>
-        <li><span class="icon linkedin"></span><a class="label" href="https://kr.linkedin.com/in/phuoc-b-t-huynh-37b269137" target="_blank">LinkedIn</a></li>
-        <li><span class="icon github"></span><a class="label" href="https://github.com/annadotcom" target="_blank">GitHub</a></li>
-        <li><span class="icon scholar"></span><a class="label" href="https://scholar.google.com/citations?user=jL9vHOEAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+        <li><span class="icon facebook"></span><a class="label" href="https://www.facebook.com/htbpphuoc" target="_blank" rel="noopener">Facebook</a></li>
+        <li><span class="icon linkedin"></span><a class="label" href="https://kr.linkedin.com/in/phuoc-b-t-huynh-37b269137" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><span class="icon github"></span><a class="label" href="https://github.com/annadotcom" target="_blank" rel="noopener">GitHub</a></li>
+        <li><span class="icon scholar"></span><a class="label" href="https://scholar.google.com/citations?user=jL9vHOEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
       </ul>
     </aside>
 
