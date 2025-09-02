@@ -138,5 +138,10 @@ a:hover{text-decoration:underline}
 .timeline-content .edu-degree{ font-weight:600; margin:4px 0 }
 .timeline-content .edu-school{ color:#333 }
 
+/* First-author underline */
+.me{ text-decoration: underline; }
+/* Nếu muốn mọi "Authors:" về chữ thường (không bold) */
+.authors-label{ font-weight:400; }
+
 /* Years in lists (Experience/Service) keep black & bold */
 .content ul li strong{ color:#000 }
