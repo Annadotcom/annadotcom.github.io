@@ -10,16 +10,16 @@
   --hover:#f2f6ff;        /* hover row bg */
   --paper:#6f42c1;        /* tiny paper icon color */
 
-  --accent:#0a66c2;       /* accent for active nav underline, etc. */
+  --accent:#0a66c2;       /* active nav underline */
 
-  --year:#819A91;         /* color for year headings in Publications */
-  --social-text:#A8BBA3;  /* text color for sidebar social labels */
+  --year:#819A91;         /* section/year heading color */
+  --social-text:#A8BBA3;  /* sidebar social label color */
 
   --pending:#FFDBB6;      /* pending label color */
-  --pending-bg:#fffaf5;   /* very light background if needed */
+  --pending-bg:#fffaf5;   /* very light background */
 }
 
-/* = Base ======================================================= */
+/* === Base ===================================================== */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
@@ -31,17 +31,15 @@ body{
 a{color:var(--link); text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* = Top navigation (center + UPPERCASE + bold) ================= */
+/* === Top nav: centered, UPPERCASE, bold ======================= */
 .topnav{
-  padding:14px 20px;
-  border-bottom:1px solid var(--line);
-  background:#fafafa;
+  padding:14px 20px; border-bottom:1px solid var(--line); background:#fafafa;
   display:flex; justify-content:center; gap:28px; flex-wrap:wrap;
 }
 .topnav a{
   color:var(--fg);
-  text-transform:uppercase;      /* IN HOA */
-  font-weight:700;               /* bold */
+  text-transform:uppercase;
+  font-weight:700;
   letter-spacing:.4px;
 }
 .topnav a.active{
@@ -50,22 +48,17 @@ a:hover{text-decoration:underline}
   padding-bottom:2px;
 }
 
-/* = Layout (flex: sidebar không kéo dài theo content) ========== */
+/* === Layout (flex, sidebar không kéo dài) ===================== */
 .layout{
-  max-width:1100px;
-  margin:24px auto;
+  max-width:1100px; margin:24px auto;
   display:flex; gap:28px; align-items:flex-start;
   padding:0 20px;
 }
 @media (max-width:820px){ .layout{flex-direction:column} }
 
-.content{
-  flex:1 1 auto;
-  min-width:0;
-  min-height:50vh;
-}
+.content{ flex:1 1 auto; min-width:0; min-height:50vh; }
 
-/* = Sidebar card ============================================== */
+/* === Sidebar =================================================== */
 .sidebar{
   flex:0 0 300px;
   background:var(--card);
@@ -97,93 +90,53 @@ a:hover{text-decoration:underline}
 .icon.github{background-image:url('data:image/svg+xml;utf8,<svg fill="%2324292e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.36-1.17-3.36-1.17-.46-1.17-1.12-1.48-1.12-1.48-.92-.64.07-.63.07-.63 1.02.07 1.56 1.06 1.56 1.06 .9 1.55 2.37 1.1 2.95.84.09-.66.35-1.1.63-1.36-2.22-.25-4.55-1.12-4.55-5 0-1.1.39-2 .1-2.7 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 7.07a9.6 9.6 0 0 1 2.78.38c1.9-1.29 2.74-1.02 2.74-1.02.29.7.1 1.6.05 2.7 0 3.9-2.33 4.75-4.56 5 .36.31.67.92.67 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>');}
 .icon.scholar{background-image:url('data:image/svg+xml;utf8,<svg fill="%234285F4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3Zm-5 9.73V15c0 2.21 2.91 4 5 4s5-1.79 5-4v-2.27l-5 2.27-5-2.27Z"/></svg>');}
 
-/* = Headings in content ======================================= */
-.content h1{
-  font-size:28px; font-weight:800;
-  border-bottom:2px solid var(--line);
-  padding-bottom:8px; margin:0 0 16px;
-}
+/* === Headings in content ===================================== */
+.content h1,
 .content h2{
-  font-size:22px; margin-top:28px;
-  color:var(--accent);
-  border-left:4px solid var(--accent);
+  font-size:22px;
+  margin-top:28px;
+  color:var(--year);                 /* #819A91 */
+  border-left:4px solid var(--year);
   padding-left:8px;
 }
 
-/* Year headings (Publications) */
-.content h2.year{
-  color:var(--year);
-  border-left-color:var(--year);
-}
-
-/* = Publications list ========================================= */
+/* === Publications ============================================ */
 .pub-list{list-style:none; padding:0; margin:0}
 .pub{
-  margin-bottom:14px;
-  padding:12px 14px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#fff;
-  box-shadow:0 1px 2px rgba(16,24,40,.04);
+  margin-bottom:14px; padding:12px 14px;
+  border:1px solid var(--line); border-radius:12px;
+  background:#fff; box-shadow:0 1px 2px rgba(16,24,40,.04);
 }
-
-/* Title (black + bold) with inline icon */
-.title{
-  display:block;
-  font-weight:700; font-size:18px;
-  margin-bottom:4px; line-height:1.3;
-}
+.title{ display:block; font-weight:700; font-size:18px; margin-bottom:4px; line-height:1.3 }
 .title a{ color:#111; font-weight:700; text-decoration:none }
 .title a:hover{ text-decoration:underline }
 .paper-link{ display:inline-block; margin-left:6px; width:18px; height:18px; vertical-align:baseline }
 .paper-link svg{ width:18px; height:18px; display:block }
 .paper-link .paper{ fill:var(--paper) }
-
 .authors{color:#333; font-size:15px}
 .venue{color:#555; font-style:italic; font-size:15px}
 .meta{color:#666; font-size:14px}
-.badge{
-  display:inline-block; padding:2px 6px; font-size:12px; font-weight:700;
-  border-radius:6px; background:#e7f1ff; color:#0a58ca; margin-right:6px;
-}
+.badge{ display:inline-block; padding:2px 6px; font-size:12px; font-weight:700; border-radius:6px; background:#e7f1ff; color:#0a58ca; margin-right:6px; }
 
-/* Pending box at bottom of publications */
+/* Pending box (bottom) */
 .pending-card{
-  margin-top:32px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#fff;          /* đổi thành var(--pending-bg) nếu muốn nền pastel */
-  padding:16px;
-  box-shadow:0 1px 2px rgba(16,24,40,.04);
+  margin-top:32px; border:1px solid var(--line); border-radius:12px;
+  background:#fff; padding:16px; box-shadow:0 1px 2px rgba(16,24,40,.04);
 }
 .pending-card h3{
-  margin:0 0 10px;
-  font-size:18px; font-weight:700;
-  color:var(--pending);                /* #FFDBB6 */
-  border-left:4px solid var(--pending);
-  padding-left:8px;
+  margin:0 0 10px; font-size:18px; font-weight:700;
+  color:var(--pending); border-left:4px solid var(--pending); padding-left:8px;
 }
 
-/* = Optional: simple timeline styles (nếu dùng ở Home) ========= */
-.timeline{ position:relative; margin-left:20px; padding-left:20px; border-left:3px solid var(--accent) }
+/* === Timeline (Education on Home) ============================ */
+.timeline{ position:relative; margin-left:20px; padding-left:20px; border-left:3px solid #111 } /* black line */
 .timeline-item{ position:relative; margin-bottom:30px }
-.timeline-dot{ position:absolute; left:-11px; top:4px; width:14px; height:14px; border-radius:50%; background:var(--accent); border:2px solid #fff; box-shadow:0 0 0 2px var(--accent) }
+.timeline-dot{ position:absolute; left:-11px; top:4px; width:14px; height:14px; border-radius:50%; background:#111; border:2px solid #fff; box-shadow:0 0 0 2px #111 }
 .timeline-content{ margin-left:10px }
-.timeline-content .edu-period{ font-weight:600; color:var(--accent) }
+/* Years in Education timeline = black */
+.timeline-content .edu-period{ font-weight:600; color:#000 }
 .timeline-content .edu-degree{ font-weight:600; margin:4px 0 }
 .timeline-content .edu-school{ color:#333 }
 
-/* Headings muốn dùng màu #819A91 (giống year) */
-.content h2.year{
-  color:var(--year);            /* #819A91 */
-  border-left-color:var(--year);
-}
-
-/* Timeline cho Education dùng màu đen */
-.timeline-edu{
-  border-left-color:#111;
-}
-.timeline-edu .timeline-dot{
-  background:#111;
-  box-shadow:0 0 0 2px #111;
-}
+/* Years in lists (Experience/Service) keep black & bold */
+.content ul li strong{ color:#000 }
