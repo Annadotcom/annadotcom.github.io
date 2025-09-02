@@ -112,7 +112,7 @@ a:hover{text-decoration:underline}
 .title a:hover{ text-decoration:underline }
 .paper-link{ display:inline-block; margin-left:6px; width:18px; height:18px; vertical-align:baseline }
 .paper-link svg{ width:18px; height:18px; display:block }
-.paper-link .paper{ fill:var(--paper) }
+.paper-link .paper { fill: var(--year); }   /* icon paper = màu year (#819A91) */
 .authors{color:#333; font-size:15px}
 .venue{color:#555; font-style:italic; font-size:15px}
 .meta{color:#666; font-size:14px}
