@@ -1,8 +1,8 @@
 /* === Theme variables ========================================= */
 :root{
-  --bg:#F7F4EA;           /* site background */
+  --bg:#FAF9EE;           /* site background */
   --fg:#111;              /* base text */
-  --muted:#667085;        /* secondary text */
+  --muted:#111;        /* secondary text */
   --link:#0a66c2;         /* default link color (content area) */
 
   --card:#fbfcff;         /* sidebar card bg */
@@ -12,7 +12,7 @@
 
   --accent:#0a66c2;       /* active nav underline */
 
-  --year:#819A91;         /* section/year heading color */
+  --year:#111;         /* section/year heading color */
   --social-text:#A8BBA3;  /* sidebar social label color */
 
   --pending:#FFDBB6;      /* pending label color */
