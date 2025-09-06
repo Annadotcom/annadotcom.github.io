@@ -144,33 +144,28 @@ a:hover{text-decoration:underline}
 }
 
 /* === Timeline (Education on Home) ============================ */
-.timeline{
-  border-left:none;
-  margin-left:0;
-  padding-left:0;
+.timeline {
+  border-left: none;   /* bỏ gạch dọc */
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.timeline-item{
-  position:relative;
-  margin-bottom:30px;
-  padding-left:0;          /* không cần chừa chỗ vì chấm nằm trong .edu-period */
+.edu-period {
+  display: flex;       /* icon + text trên cùng một hàng */
+  align-items: center; /* căn giữa theo chiều dọc */
+  gap: 8px;            /* khoảng cách giữa chấm và năm */
+  font-weight: 700;
+  color: #000;
 }
 
-.timeline-content .edu-period{
-  font-weight:700;
-  color:#000;
-  display:flex;
-  align-items:center;      /* chấm và năm thẳng hàng theo chiều dọc */
-  gap:8px;                 /* khoảng cách giữa chấm và năm */
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;  /* bo tròn thành chấm */
+  background: #111;    /* màu đen */
+  flex-shrink: 0;      /* không co lại khi thiếu chỗ */
 }
 
-.timeline-dot{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#111;
-  flex-shrink:0;
-}
 
 
 /* Years in Education timeline = black */
