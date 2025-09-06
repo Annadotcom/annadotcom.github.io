@@ -87,7 +87,7 @@ a:hover{text-decoration:underline}
 }
 .subtitle{
   text-align:center;
-  font-size:14px;
+  font-size:16px;
   font-weight:700;     /* in đậm */
   margin:2px 0 14px;
   color:var(--fg);
@@ -127,7 +127,7 @@ a:hover{text-decoration:underline}
 .paper-link svg path {
   fill: var(--year);   /* đồng bộ màu với số năm (#819A91) */
 }
-.paper-link .paper { fill: var(--year); }   /* icon paper = màu year (#819A91) */
+.paper-link .paper { fill: var(--year); }   /* icon paper = màu year */
 .authors{color:#333; font-size:15px}
 .venue{color:#555; font-style:italic; font-size:15px}
 .meta{color:#666; font-size:14px}
