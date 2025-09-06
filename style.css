@@ -87,7 +87,7 @@ a:hover{text-decoration:underline}
 }
 .subtitle{
   text-align:center;
-  font-size:16px;
+  font-size:18px;
   font-weight:700;     /* in đậm */
   margin:2px 0 14px;
   color:var(--fg);
