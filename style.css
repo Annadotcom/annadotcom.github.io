@@ -95,7 +95,7 @@ a:hover{text-decoration:underline}
 
 
 /* Icons (SVG data-URI) */
-.icon{width:120px;height:120px;display:inline-block;background-size:contain;background-repeat:no-repeat}
+.icon{width:180px;height:180px;display:inline-block;background-size:contain;background-repeat:no-repeat}
 .icon.scholar{background-image:url('data:image/svg+xml;utf8,<svg fill="%234285F4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3Zm-5 9.73V15c0 2.21 2.91 4 5 4s5-1.79 5-4v-2.27l-5 2.27-5-2.27Z"/></svg>');}
 .icon.linkedin{background-image:url('data:image/svg+xml;utf8,<svg fill="%230A66C2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.94 7.5A1.94 1.94 0 1 1 7 3.62 1.94 1.94 0 0 1 6.94 7.5ZM4.5 9h5v12h-5V9Zm7.5 0h4.8v1.64h.07c.67-1.2 2.3-1.96 3.9-1.96 4.17 0 4.93 2.3 4.93 5.29V21H20v-6c0-1.43-.03-3.26-1.99-3.26-1.99 0-2.29 1.55-2.29 3.15V21h-4.72V9Z"/></svg>');}
 .icon.github{background-image:url('data:image/svg+xml;utf8,<svg fill="%2324292e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.36-1.17-3.36-1.17-.46-1.17-1.12-1.48-1.12-1.48-.92-.64.07-.63.07-.63 1.02.07 1.56 1.06 1.56 1.06 .9 1.55 2.37 1.1 2.95.84.09-.66.35-1.1.63-1.36-2.22-.25-4.55-1.12-4.55-5 0-1.1.39-2 .1-2.7 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 7.07a9.6 9.6 0 0 1 2.78.38c1.9-1.29 2.74-1.02 2.74-1.02.29.7.1 1.6.05 2.7 0 3.9-2.33 4.75-4.56 5 .36.31.67.92.67 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>');}
@@ -145,32 +145,32 @@ a:hover{text-decoration:underline}
 
 /* === Timeline (Education on Home) ============================ */
 .timeline{
-  border-left:none;        /* bỏ gạch thẳng dọc */
+  border-left:none;
   margin-left:0;
   padding-left:0;
-  position:relative;
 }
+
 .timeline-item{
   position:relative;
-  display:flex;         /* dùng flex để canh theo chiều ngang */
-  align-items:center;   /* căn giữa theo chiều dọc */
   margin-bottom:30px;
+  padding-left:26px;   /* chừa chỗ cho dấu chấm */
 }
 
 .timeline-dot{
-  flex:0 0 12px;        /* chấm chiếm 12px */
-  width:12px;
-  height:12px;
+  position:absolute;
+  left:0;
+  top:4px;             /* chỉnh để nó ngang hàng với dòng năm */
+  width:10px;
+  height:10px;
   border-radius:50%;
   background:#111;
-  margin-right:10px;    /* khoảng cách giữa chấm và số */
-  position:relative;    /* bỏ tuyệt đối */
-  top:auto; left:auto;
-  border:2px solid #fff;
 }
-.timeline-content{
-  flex:1;               /* nội dung chiếm phần còn lại */
+
+.timeline-content .edu-period{
+  font-weight:700;
+  color:#000;
 }
+
 /* Years in Education timeline = black */
 .timeline-content .edu-period{ font-weight:600; color:#000 }
 .timeline-content .edu-degree{ font-weight:600; margin:4px 0 }
