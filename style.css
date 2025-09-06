@@ -179,7 +179,6 @@ a:hover{text-decoration:underline}
 
 
 /* Years in Education timeline = black */
-.timeline-content .edu-period{ font-weight:600; color:#000 }
 .timeline-content .edu-degree{ font-weight:600; margin:4px 0 }
 .timeline-content .edu-school{ color:#333 }
 
