@@ -152,19 +152,25 @@ a:hover{text-decoration:underline}
 }
 .timeline-item{
   position:relative;
-  padding-left:28px;       /* chừa chỗ cho chấm */
+  display:flex;         /* dùng flex để canh theo chiều ngang */
+  align-items:center;   /* căn giữa theo chiều dọc */
   margin-bottom:30px;
 }
+
 .timeline-dot{
-  left:0;                  /* đặt chấm ngay mép trái */
-  top:6px;
-  width:14px; height:14px;
+  flex:0 0 12px;        /* chấm chiếm 12px */
+  width:12px;
+  height:12px;
   border-radius:50%;
-  background:#111;         /* chấm đen */
-  border:2px solid #fff;   /* viền trắng mỏng để nổi trên nền */
-  box-shadow:none;         /* bỏ vòng gạch ngoài */
+  background:#111;
+  margin-right:10px;    /* khoảng cách giữa chấm và số */
+  position:relative;    /* bỏ tuyệt đối */
+  top:auto; left:auto;
+  border:2px solid #fff;
 }
-.timeline-content{ margin-left:10px }
+.timeline-content{
+  flex:1;               /* nội dung chiếm phần còn lại */
+}
 /* Years in Education timeline = black */
 .timeline-content .edu-period{ font-weight:600; color:#000 }
 .timeline-content .edu-degree{ font-weight:600; margin:4px 0 }
