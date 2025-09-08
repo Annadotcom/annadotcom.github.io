@@ -56,11 +56,15 @@ a:hover{text-decoration:underline}
 }
 @media (max-width:820px){ .layout{flex-direction:column} }
 
-.content{ flex:1 1 auto; min-width:0; min-height:50vh; }
 
 /* === Sidebar =================================================== */
 .sidebar{
-  flex:0 0 300px;
+  flex:0 0 320px;
+  width:320px;
+  min-width:320px;
+  max-width:320px;
+  align-self:flex-start;
+  overflow-wrap:break-word;
   background:var(--card);
   border:1px solid var(--line);
   border-radius:12px;
@@ -68,6 +72,12 @@ a:hover{text-decoration:underline}
   height:auto;
   box-shadow:0 2px 8px rgba(16,24,40,.05);
 }
+
+/* Nội dung bên phải chiếm phần còn lại, không đẩy sidebar */
+.content{
+  flex: 1 1 0%;
+}
+
 .avatar{
   width:200px; height:200px; border-radius:10%; object-fit:cover;
   display:block; margin:0 auto 12px; background:#ddd; border:3px solid #fff;
@@ -75,6 +85,15 @@ a:hover{text-decoration:underline}
 }
 .name{font-size:20px; font-weight:800; text-align:center; margin:6px 0 6px}
 
+/* Mobile: cho sidebar full width */
+@media (max-width: 820px){
+  .sidebar{
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+}
 
 .social-list{
   display:flex;
