@@ -1,6 +1,6 @@
 /* === Theme variables ========================================= */
 :root{
-  --bg:#FAF9EE;           /* site background */
+  --bg:#fff;           /* site background */
   --fg:#111;              /* base text */
   --muted:#111;        /* secondary text */
   --link:#0a66c2;         /* default link color (content area) */
@@ -116,7 +116,7 @@ a:hover{text-decoration:underline}
   margin-top:28px;
   color:var(--year);                 
   border-left:0;
-  padding-left:8px;
+  padding-left:0px;
   font-weight:800
 }
 
