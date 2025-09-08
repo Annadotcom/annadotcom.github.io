@@ -59,10 +59,10 @@ a:hover{text-decoration:underline}
 
 /* === Sidebar =================================================== */
 .sidebar{
-  flex:0 0 260px;
-  width:260px;
-  min-width:260px;
-  max-width:260px;
+  flex:0 0 280px;
+  width:280px;
+  min-width:280px;
+  max-width:280px;
   align-self:flex-start;
   overflow-wrap:break-word;
   background:var(--card);
