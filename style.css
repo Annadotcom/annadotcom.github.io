@@ -77,7 +77,7 @@ a:hover{text-decoration:underline}
   text-align: justify !important; /*căn đều 2 bên*/
   text-justify: inter-word;
   margin-bottom: 1em;
-  text-indent: 1.5em;   /* thụt đầu dòng */
+  text-indent: 0;   /* không thụt đầu dòng */
 }
 
 
@@ -228,4 +228,24 @@ a:hover{text-decoration:underline}
 }
 .email-address a:hover {
   text-decoration: underline;
+}
+
+/* Trang Awards: bỏ toàn bộ bullet */
+.awards ul{                 /* danh sách cấp 1 (năm) */
+  list-style: none;
+  margin: 0 0 18px 0;
+  padding-left: 0;         /* năm đứng sát lề trái, đúng vị trí chấm to trước đây */
+}
+.awards ul > li{
+  margin: 10px 0;
+}
+
+/* danh sách cấp 2 (các scholarship dưới mỗi năm) */
+.awards ul ul{
+  list-style: none;        /* bỏ chấm nhỏ */
+  margin-top: 6px;
+  padding-left: 20px;      /* GIỮ độ thụt như cũ (điều chỉnh 16–24px tùy mắt) */
+}
+.awards ul ul > li{
+  margin: 6px 0;
 }
