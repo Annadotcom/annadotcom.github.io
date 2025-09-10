@@ -347,3 +347,10 @@ a:hover{text-decoration:underline}
   /* Awards list thụt ít hơn để tránh tràn dòng */
   .awards ul ul{ padding-left: 0px !important; }
 }
+
+/* Bỏ bullet + thụt lề cho Education list trên mobile */
+.education-flat {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
