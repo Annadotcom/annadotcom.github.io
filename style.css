@@ -230,25 +230,23 @@ a:hover{text-decoration:underline}
   text-decoration: underline;
 }
 
-/* Trang Awards: bỏ toàn bộ bullet */
-.awards ul{                 /* danh sách cấp 1 (năm) */
-  list-style: none;
-  margin: 0 0 18px 0;
-  padding-left: 20;         /* năm đứng sát lề trái, đúng vị trí chấm to trước đây */
+/* Trang Awards */
+.awards-flat{
+  list-style:none;
+  margin:0;
+  padding:0;
 }
-.awards ul > li{
-  margin: 10px 0;
+.awards-flat li{
+  margin:6px 0;
+  font-size:15px;
+}
+.awards-flat li strong{
+  display:inline-block;
+  width:50px;     /* canh cột năm thẳng hàng */
+  font-weight:700;
+  color:#000;
 }
 
-/* danh sách cấp 2 (các scholarship dưới mỗi năm) */
-.awards ul ul{
-  list-style: none;        /* bỏ chấm nhỏ */
-  margin-top: 6px;
-  padding-left: 20px;      /* GIỮ độ thụt như cũ (điều chỉnh 16–24px tùy mắt) */
-}
-.awards ul ul > li{
-  margin: 6px 0;
-}
 
 
 /* ======================= */
