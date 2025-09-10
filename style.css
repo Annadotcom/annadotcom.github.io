@@ -179,7 +179,7 @@ a:hover{text-decoration:underline}
 .timeline{
   border-left:none;
   margin-left:0;
-  padding-left:20px;   /* chỉnh mức thụt: 12–20px tùy mắt */
+  padding-left:0px;   /* chỉnh mức thụt: 12–20px tùy mắt */
 }
 
 /* Mỗi item cách nhau gọn gàng */
@@ -187,15 +187,22 @@ a:hover{text-decoration:underline}
   margin-bottom:22px;
 }
 
-/* Dòng năm + chấm cùng hàng, có khoảng cách dưới cho tách khỏi degree */
-.edu-period{
-  display:flex;
-  align-items:center;
-  gap:10px;             /* khoảng giữa chấm và năm */
-  font-weight:700;
-  color:#000;
-  margin-bottom:6px;   /* tách rõ với dòng degree */
+.education-flat{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+.education-flat li{
+  margin: 10px 0;
+  font-size: 15px;
+}
+.education-flat li strong{
+  display: inline;
+  margin-right: 8px;    /* cách một chút giữa năm và text */
+  font-weight: 700;
+  color: #000;
+}
+
 
 /* Chấm tròn */
 .timeline-dot{
@@ -240,9 +247,9 @@ a:hover{text-decoration:underline}
   margin:6px 0;
   font-size:15px;
 }
-.awards-flat li strong{
-  display:inline-block;
-  width:50px;     /* canh cột năm thẳng hàng */
+.awards-flat li strong {
+  display:inline;
+  margin-right:8px;   /* khoảng cách nhỏ giữa năm và chữ */
   font-weight:700;
   color:#000;
 }
@@ -307,7 +314,7 @@ a:hover{text-decoration:underline}
   /* Danh sách Awards: giữ thụt hợp lý */
   .awards ul{ margin: 0 0 14px 0; }
   .awards ul > li{ margin: 8px 0; }
-  .awards ul ul{ padding-left: 18px !important; }
+  .awards ul ul{ padding-left: 0px !important; }
 }
 
 /* =================== */
@@ -332,11 +339,11 @@ a:hover{text-decoration:underline}
   .content h2{ font-size: 18px; margin-top: 18px; }
 
   /* Timeline compact */
-  .timeline{ padding-left: 10px; }
+  .timeline{ padding-left: 0px; }
   .timeline-item{ margin-bottom: 16px; }
   .edu-period{ margin-bottom: 4px; }
   .timeline-dot{ width: 7px; height: 7px; }
 
   /* Awards list thụt ít hơn để tránh tràn dòng */
-  .awards ul ul{ padding-left: 14px !important; }
+  .awards ul ul{ padding-left: 0px !important; }
 }
