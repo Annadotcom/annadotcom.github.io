@@ -244,7 +244,7 @@ a:hover{text-decoration:underline}
 .awards ul ul{
   list-style: none;        /* bỏ chấm nhỏ */
   margin-top: 6px;
-  padding-left: 30px;      /* GIỮ độ thụt như cũ (điều chỉnh 16–24px tùy mắt) */
+  padding-left: 20px;      /* GIỮ độ thụt như cũ (điều chỉnh 16–24px tùy mắt) */
 }
 .awards ul ul > li{
   margin: 6px 0;
