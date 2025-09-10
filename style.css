@@ -315,12 +315,15 @@ a:hover{text-decoration:underline}
 /* =================== */
 /* SMALL MOBILE (≤480) */
 /* =================== */
-@media (max-width: 480px){
-
+@media (max-width: 480px){ .topnav a{ font-size:13px } .topnav{ gap:12px } }
+{
   /* Tăng bề rộng nhịp chữ, giảm font một chút */
   body{ font-size: 15px; }
 
-  .avatar{ width: 140px; height: 140px; border-radius: 10px; }
+  .avatar{
+    margin-left: auto;     /* đảm bảo avatar nằm giữa */
+    margin-right: auto;
+  }
   .name{ font-size: 19px; }
   .subtitle{ font-size: 14px; }
   .email-address{ font-size: 13px; }
